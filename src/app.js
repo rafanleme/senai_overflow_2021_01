@@ -7,8 +7,6 @@ const cors = require("cors");
 
 require("dotenv").config();
 
-console.log(process.env.DATABASE_URL);
-
 //importa as rotas
 const routes = require("./routes");
 
