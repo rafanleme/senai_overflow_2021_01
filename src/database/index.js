@@ -7,14 +7,13 @@ const Question = require("../models/Question");
 const Category = require("../models/Category");
 const Answer = require("../models/Answer");
 
-const connection = new Sequelize(dbConfig);
+const connection = new Sequelize(dbConfig.url, dbConfig.config);
 
 //inicializa os models
 Student.init(connection);
 Question.init(connection);
 Category.init(connection);
 Answer.init(connection);
-
 
 //inicializa os relacionamentos
 Student.associate(connection.models);
